@@ -2,6 +2,7 @@ body, html{
     height: 100%;
     margin: 0;
     color: black;
+    /* background-color: rgba(0, 0, 0 , 0.1); */
 }
 
 h1{
@@ -13,6 +14,12 @@ h1 em{
     font-size: 77px;
 }
 
+.main-div{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 22fr 1fr;
+}
+
 #bg-canvas{
     position: fixed;
     top: 0;
@@ -20,101 +27,71 @@ h1 em{
     z-index: -1;    /* 将bg-canvas放置在最底层 */
     width: 100%;
     height: 100%;
-    opacity: 0.5;
+    opacity: 0.1;
 }
 
-/* 这里实现滚动进度条 */
-#progress-bar{
+header{
+    padding-bottom: 10px;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: auto 1fr; /* 列1自适应宽度，列2占据剩余空间 */
     position: fixed;
     top: 0;
-    left: 0;
-    width: 0;
-    height: 10px;
-    background-color: #007bff;
-    z-index: 10;
-    transition: width 1s ease;
+    width: 100%;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 4vh;
+    /* font-size: 0.875rem; */
+}
+
+/* 设置导航栏品牌文字的颜色 */
+.navbar .navbar-brand {
+    color: rgba(244, 209, 7, 0.86);
+    display: block;
+    margin-left: 10px;
+    font-size: 2em;
+}
+
+/* 设置导航栏中菜单链接的样式，包括颜色和过渡效果 */
+.navbar .nav-item .nav-link {
+    margin-right: 10px;
+    color: var(--navbar-text-color);
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+  
+/* 设置导航栏中菜单链接的鼠标悬停样式 */
+.navbar .nav-item .nav-link:hover {
+    color: rgba(7, 99, 161, 0.7);
+    
 }
 
 
-
-/* 主布使用grid布局 */
-.main-div{
-    display: grid;
-    grid-template-rows: repeat(16, 1fr);
-    grid-template-columns: repeat(16, 1fr);
-    width: 100vw;
-    height: 100vh;
-
-    /* 初始透明度为1 */
-    opacity: 1;
-    visibility: visible;
-    /* 使用过渡属性，在0.3s内以缓动效果改变透明度 */
-    transition: opacity 5s ease;
+/* 设置导航栏中菜单链接的聚焦样式 */
+.navbar .nav-item .nav-link:focus {
+    color: rgba(19, 179, 33, 0.7);
 }
 
-.main-div.fade-out{
-    /* 这里添加一个fade-out类，以实现逐渐消失 */
-    opacity: 0;
-    /* 隐藏元素不占用页面空间 */
-    visibility: hidden;
-    transition: opacity 5s ease;
-}
-
-
-/* header跨两行*整列 */
-header{
-    /* row-start / column-start / row-end / column-end */
-    grid-area: 1 / 1 / 3 / 17;
-    padding: 20px;
-    text-align: center;
-}
-
-/* nav跨两行*整列 */
-nav{
-    grid-area: 6 / 1 / 8 / 17;
-    /* background-color: #555; */
-    padding: 10px 0;
-}
-
-nav div ul{
+.navbar ul{
     list-style-type: none;
-    margin: 0;
+    margin-right: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
-nav div ul li{
+.navbar ul li{
     margin: 0 15px;
-    font-size: 24px;
-    background-color: rgba(19, 190, 190, 0.2);
-    border-radius: 12px;
+    font-size: 1em;
 }
 
-nav div ul li a{
+.navbar ul li a{
     text-decoration: none;
     padding: 5px 20px;
-    border-radius: 5px;
 }
 
-/* 在CSS中定义下拉菜单样式 */
-.dropdown-menu{
-    display: none;
-    position: absolute;
-    background-color: aqua;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.dropdown-menu li{
-    margin: 5px 0;
-    font-size: 16px;
-}
-
-/* 当下拉菜单展开时，显示 */
-.dropdown:hover .dropdown-menu{
-    display: block;
-}
 
 .show-me{
     display: block;
@@ -123,61 +100,20 @@ nav div ul li a{
     padding: 0 auto;
 }
 
-/* section15~17行*整列 */
 section{
-    grid-area: 9 / 1 / 15 / 17;
     padding: 20px;
     text-align: right;
 }
 
 footer{
-    grid-area: 15 / 1 / 17 / 17;
     padding: 10px 0;
     text-align: center;
 }
 
 
-
-
-/* 下面是关于第二页 */
-
-.second-div{
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    opacity: 0;
-    /* 隐藏元素不占用页面空间 */
-    visibility: hidden;
-    transition: opacity 5s ease;
-}
-
-.second-div.fade-in{
-    position: fixed;
-    top: 0;
-    left: 0;
-    opacity: 1;
-    visibility: visible;
-    /* 使用过渡属性，在5s内以缓动效果改变透明度 */
-    transition: opacity 5s ease;
-}
-
-.sidebar{
-    float: right;
-    width: 10%;
-    height: 70%;
-    margin-top: 10vh;
-    margin-right: 2%;
-    border: 3px dotted blueviolet;
-    border-radius: 13px;
-    background-color: rgba(121, 15, 15 , 0.1);
-}
-
-.sidebar ul li{
-    margin-top: 10vh;
-}
-
 .main-content{
-    flex: 1;/* 主内容区占据剩余空间 */
+    /* flex: 1; */
+    display: flex;
     flex-direction: column;
     justify-content: center;
     justify-items: center;
