@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Personal HomePage</title>
+        <link rel="stylesheet" href="./css/home_style.css">
+    </head>
+    <body>
+
+        <canvas id="bg-canvas"></canvas> <!-- Canvas element for background --> 
+        <!-- 这里设置进度条 -->
+        <div id="progress-bar"></div>
+        <!-- 这里是最初进入时的page -->
+        <div class="main-div">
+            <header>
+                <h1>Welcome to <em>Shenc</em>'s Website</h1>
+            </header>
+
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="./cv.html">CV</a></li>
+                        <li class="dropdown" id="about-dropdown">
+                            Services
+                            <ul class="dropdown-menu" id="about-dropdown-menu">
+                                <li><a href="./services.html">Option 1</a></li>
+                                <li><a href="#">Option 2</a></li>
+                                <li><a href="#">Option 3</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li><a href="./contact.html">Contacts</a></li>
+                        <li><a href="#">English Version</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <section>
+                <h2>About Me</h2>
+                <h3>Spethen Shenc:</h3>
+                <p>undergraduate student at <a href="https://ustc.edu.cn/">USTC</a>(University of Science & Technology of China)</p>
+            </section>
+
+            <footer>
+                <p>&copy; 2024 My Website. All rights reserved.</p>
+            </footer>
+
+        </div>
+
+        <!-- 之后滑动，显示这个 -->
+        <div class="second-div">
+            <div class="main-content">
+                <div class="flex-item">
+                    <a href="./self-intro.html" class="show-me" title="about">
+                        <img src="./img/my_pics/me.jpg" alt="ME" class="show-me" width="150">
+                    </a>
+                </div>
+                <div class="flex-item">
+                    <div class="flex-item dotted-border">Part 1</div>
+                    <div class="flex-item dotted-border">Part 2</div>
+                    <div class="flex-item dotted-border">Part 3</div>
+                </div>
+                <div class="flex-item">
+                    <div class="flex-unit">
+                        <a href="https://www.16personalities.com/personality-types" class="show-me no-underline" title="16personalities-test">
+                            <figure class="img-container">
+                                <img src="./img/my_pics/enfj.png" alt="ENFJ" class="show-me" width="150">
+                                <figcaption>An ENFJ</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+
+                    <div class="flex-unit">
+                        <a href="https://ustc.edu.cn" class="show-me no-underline" title="USTC">
+                            <figure class="img-container">
+                                <img src="./img/others/ustc_logo1.svg" alt="USTC" width="150">
+                                <figcaption>From USTC</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+
+                    <div class="flex-unit">
+                        <a href="#" class="show-me no-underline" title="USTC English Club">
+                            <figure class="img-container">
+                                <img src="./img/others/EClogo.png" alt="USTC English Club" width="150">
+                                <figcaption>Love For EC</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="sidebar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="./self-intro.html">About Me</a></li>
+                    <li class="dropdown" id="about-dropdown">
+                        Services
+                        <ul class="dropdown-menu" id="about-dropdown-menu">
+                            <li><a href="./services.html">Option 1</a></li>
+                            <li><a href="#">Option 2</a></li>
+                            <li><a href="#">Option 3</a></li>
+                        </ul>
+                    </li>
+                        
+                    <li><a href="./contact.html">Contacts</a></li>
+                    <li><a href="#">English Version</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+        </p>
+        
+        <script src="./js/home-scripts.js"></script>
+        <script src="./js/bg-canvas.js"></script>
+    </body>
+</html>
