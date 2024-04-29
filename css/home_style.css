@@ -1,0 +1,223 @@
+body, html{
+    height: 100%;
+    margin: 0;
+    color: black;
+}
+
+h1{
+    font-size: 45px;
+    font-family: 'Dancing Script',serif;
+}
+
+h1 em{
+    font-size: 77px;
+}
+
+#bg-canvas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;    /* 将bg-canvas放置在最底层 */
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+/* 这里实现滚动进度条 */
+#progress-bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 10px;
+    background-color: #007bff;
+    z-index: 10;
+    transition: width 1s ease;
+}
+
+
+
+/* 主布使用grid布局 */
+.main-div{
+    display: grid;
+    grid-template-rows: repeat(16, 1fr);
+    grid-template-columns: repeat(16, 1fr);
+    width: 100vw;
+    height: 100vh;
+
+    /* 初始透明度为1 */
+    opacity: 1;
+    visibility: visible;
+    /* 使用过渡属性，在0.3s内以缓动效果改变透明度 */
+    transition: opacity 5s ease;
+}
+
+.main-div.fade-out{
+    /* 这里添加一个fade-out类，以实现逐渐消失 */
+    opacity: 0;
+    /* 隐藏元素不占用页面空间 */
+    visibility: hidden;
+    transition: opacity 5s ease;
+}
+
+
+/* header跨两行*整列 */
+header{
+    /* row-start / column-start / row-end / column-end */
+    grid-area: 1 / 1 / 3 / 17;
+    padding: 20px;
+    text-align: center;
+}
+
+/* nav跨两行*整列 */
+nav{
+    grid-area: 6 / 1 / 8 / 17;
+    /* background-color: #555; */
+    padding: 10px 0;
+}
+
+nav div ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav div ul li{
+    margin: 0 15px;
+    font-size: 24px;
+    background-color: rgba(19, 190, 190, 0.2);
+    border-radius: 12px;
+}
+
+nav div ul li a{
+    text-decoration: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+
+/* 在CSS中定义下拉菜单样式 */
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    background-color: aqua;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.dropdown-menu li{
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* 当下拉菜单展开时，显示 */
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+
+.show-me{
+    display: block;
+    border-radius: 50%;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+/* section15~17行*整列 */
+section{
+    grid-area: 9 / 1 / 15 / 17;
+    padding: 20px;
+    text-align: right;
+}
+
+footer{
+    grid-area: 15 / 1 / 17 / 17;
+    padding: 10px 0;
+    text-align: center;
+}
+
+
+
+
+/* 下面是关于第二页 */
+
+.second-div{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    /* 隐藏元素不占用页面空间 */
+    visibility: hidden;
+    transition: opacity 5s ease;
+}
+
+.second-div.fade-in{
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+    /* 使用过渡属性，在5s内以缓动效果改变透明度 */
+    transition: opacity 5s ease;
+}
+
+.sidebar{
+    float: right;
+    width: 10%;
+    height: 70%;
+    margin-top: 10vh;
+    margin-right: 2%;
+    border: 3px dotted blueviolet;
+    border-radius: 13px;
+    background-color: rgba(121, 15, 15 , 0.1);
+}
+
+.sidebar ul li{
+    margin-top: 10vh;
+}
+
+.main-content{
+    flex: 1;/* 主内容区占据剩余空间 */
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+}
+
+.flex-item{
+    flex: 1;
+    display: flex;
+    margin: 10px;
+    padding: 20px;
+}
+
+.flex-unit{
+    flex: 1;
+    display: block;
+    margin: 10px;
+    padding: 20px;
+}
+
+.dotted-border{
+    border: 2px dotted blueviolet;
+    border-radius: 8px;
+}
+
+
+/* 设置figure使得caption在img正下方 */
+.img-container{
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-items: center;
+}
+
+.img-container img{
+    grid-row: 1;
+}
+
+.img-container figcaption{
+    grid-row: 2;
+}
+
+.no-underline{
+    text-decoration: none;
+}
