@@ -1,0 +1,44 @@
+{
+    "title": "Shenc's Home",
+    "description": "One More Point, Make Impossible I'm Possible",
+    "keywords": "Shenc,Homepage",
+    "author": "Shenc",
+    "logo_img": "./img/icon/avatar.jpg",
+    "logo_text_1": "Shenc",
+    "logo_text_2": "top",
+    "github": "stephen-shenc",
+    "qq": "507614154",
+    "email": "507614154@qq.com",
+    "bilibili": "1482831256",
+    "link_1": [
+        "#",
+        "fa-solid fa-blog",
+        "博客"
+    ],
+    "link_2": [
+        "#",
+        "fa-solid fa-cloud",
+        "统计"
+    ],
+    "link_3": [
+        "#",
+        "fa-solid fa-compass",
+        "起始页"
+    ],
+    "link_4": [
+        "#",
+        "fa-solid fa-book-bookmark",
+        "编程宝典"
+    ],
+    "link_5": [
+        "#",
+        "fa-solid fa-flask",
+        "开发中..."
+    ],
+    "link_6": [
+        "#",
+        "fa-solid fa-flask",
+        "敬请期待..."
+    ],
+    "Copyright_text": "Stephen Shenc"
+}
