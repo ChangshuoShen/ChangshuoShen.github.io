@@ -73,7 +73,7 @@ window.addEventListener('load', function () {
 }, false)
 
 setTimeout(function () {
-    $('#loading-text').html("字体及文件加载可能需要一定时间")
+    $('#loading-text').html("It may take much time")
 }, 3000);
 
 //获取一言
@@ -106,7 +106,7 @@ $('#hitokoto').click(function () {
         iziToast.show({
             timeout: 1000,
             icon: "fa-solid fa-circle-exclamation",
-            message: '你点太快了吧'
+            message: "Don't click that fast~"
         });
     }
 });
@@ -236,13 +236,15 @@ window.addEventListener('load', function () {
         if (window.innerWidth >= 600) {
             $('#row').attr('class', 'row');
             $("#menu").html("<i class='fa-solid fa-bars'></i>");
-            //移除移动端切换功能区
+            //移除移动端切换功能区‘
+            $(targetId).attr('class', 'hidden_more');
             $('#rightone').attr('class', 'row rightone');
         }
 
         if (window.innerWidth <= 990) {
             //移动端隐藏更多页面
             $('#container').attr('class', 'container');
+            $(targetId).attr('class', 'hidden_more');
             $("#change").html("Hello&nbsp;World&nbsp;!");
             $("#change1").html("One More Point, Make \"Impossible\" \"I\'m Possible\"");
 
