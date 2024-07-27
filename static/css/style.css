@@ -584,8 +584,13 @@ i.iconfont.icon-z_shangpinheji {
 }
 
 /*更多页面*/
-.more {
+.hidden_more {
     display: none !important;
+}
+
+.mores .shown_more {
+    display: flex !important;
+
     width: 46%;
     z-index: 999;
     position: fixed;
@@ -596,10 +601,7 @@ i.iconfont.icon-z_shangpinheji {
     top: 7%;
     border-radius: 6px;
     padding: 30px;
-}
 
-.mores .more {
-    display: flex !important;
     justify-content: space-evenly;
     flex-direction: column;
     align-items: center;

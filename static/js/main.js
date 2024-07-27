@@ -1,10 +1,3 @@
-/*
-作者: imsyy
-主页：https://www.imsyy.top/
-GitHub：https://github.com/imsyy/home
-版权所有，请勿删除
-*/
-
 //弹窗样式
 iziToast.settings({
     timeout: 10000,
@@ -50,6 +43,20 @@ window.addEventListener('load', function () {
     $('#bg').css("cssText", "transform: scale(1);filter: blur(0px);transition: ease 1.5s;");
     $('.cover').css("cssText", "opacity: 1;transition: ease 1.5s;");
     $('#section').css("cssText", "transform: scale(1) !important;opacity: 1 !important;filter: blur(0px) !important");
+
+    now = new Date(), hour = now.getHours()
+    if (hour < 6) {
+        var hello = "Good Early Morning";
+    } else if (hour < 12) {
+        var hello = "Good Morning";
+    } else if (hour < 17) {
+        var hello = "Good Afternoon";
+    } else if (hour < 22) {
+        var hello = "Good Evening";
+    } else {
+        var hello = "Good Night";
+    }
+    hello += ", Welcone To Stephen Shenc's Homepage"
 
     //用户欢迎
     setTimeout(function () {
@@ -165,11 +172,6 @@ $("#tel").mouseover(function () {
 }).mouseout(function () {
     $("#link-text").html("Contact Me");
 });
-$("#qq").mouseover(function () {
-    $("#link-text").html("My QQ");
-}).mouseout(function () {
-    $("#link-text").html("Contact Me");
-});
 $("#email").mouseover(function () {
     $("#link-text").html("Email Me");
 }).mouseout(function () {
@@ -182,25 +184,38 @@ $("#bilibili").mouseover(function () {
 });
 
 
-//更多页面切换
-let shoemore = false;
-$('#switchmore').on('click', function () {
-    shoemore = !shoemore;
-    if (shoemore && $(document).width() >= 990) {
+let showMore = false;
+var targetId = '';
+// 更多页面切换
+$('.link-card').on('click', function () {
+    targetId = '#' + $(this).data('target');
+    showMore = !showMore;
+    console.log(targetId)
+    if (showMore && $(document).width() >= 990) {
         $('#container').attr('class', 'container mores');
-        $("#change").html("Oops&nbsp;!");
-        $("#change1").html("Oh dear, you\'ve found it (click again to close).");
+        $(targetId).attr('class', 'shown_more');
     } else {
         $('#container').attr('class', 'container');
-        $("#change").html("Hello&nbsp;World&nbsp;!");
-        $("#change1").html("One More Point, Make \"Impossible\" \"I\'m Possible\"");
+        $(targetId).attr('class', 'hidden_more');
     }
 });
 
-//更多页面关闭按钮
-$('#close').on('click', function () {
-    $('#switchmore').click();
+// 更多页面关闭按钮
+$(document).on('click', '.close', function () {
+    $('#container').attr('class', 'container');
+    $(targetId).attr('class', 'hidden_more');
+    showMore = false;
 });
+
+// 更多页面显示关闭按钮
+$(document).on('mouseenter', '.shown_more', function () {
+    $(this).find('.close').css('display', 'block');
+});
+
+$(document).on('mouseleave', '.shown_more', function () {
+    $(this).find('.close').css('display', 'none');
+});
+
 
 //移动端菜单栏切换
 let switchmenu = false;
@@ -215,17 +230,6 @@ $('#switchmenu').on('click', function () {
     }
 });
 
-//更多弹窗页面
-$('#openmore').on('click', function () {
-    $('#box').css("display", "block");
-    $('#row').css("display", "none");
-    $('#more').css("cssText", "display:none !important");
-});
-$('#closemore').on('click', function () {
-    $('#box').css("display", "none");
-    $('#row').css("display", "flex");
-    $('#more').css("display", "flex");
-});
 
 //监听网页宽度
 window.addEventListener('load', function () {
@@ -263,12 +267,6 @@ $('#changemore').on('click', function () {
     }
 });
 
-//更多页面显示关闭按钮
-$("#more").hover(function () {
-    $('#close').css("display", "block");
-}, function () {
-    $('#close').css("display", "none");
-})
 
 //屏蔽右键
 document.oncontextmenu = function () {
@@ -279,33 +277,3 @@ document.oncontextmenu = function () {
     });
     return false;
 }
-
-//控制台输出
-//console.clear();
-let styleTitle1 = `
-font-size: 20px;
-font-weight: 600;
-color: rgb(244,167,89);
-`
-let styleTitle2 = `
-font-size:12px;
-color: #425AEF;
-`
-let styleContent = `
-color: rgb(30,152,255);
-`
-let title1 = 'ShencのHomepage'
-let title2 = `
-
-██████╗ ██╗   ██╗██╗    ██╗██╗███╗   ██╗██████╗ 
-██╔══██╗╚██╗ ██╔╝██║    ██║██║████╗  ██║██╔══██╗
-██████╔╝ ╚████╔╝ ██║ █╗ ██║██║██╔██╗ ██║██║  ██║
-██╔══██╗  ╚██╔╝  ██║███╗██║██║██║╚██╗██║██║  ██║
-██████╔╝   ██║   ╚███╔███╔╝██║██║ ╚████║██████╔╝
-╚═════╝    ╚═╝    ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝╚═════╝               
-`
-let content = `
-Github:  https://github.com/Stephen-Shenc
-`
-console.log(`%c${title1} %c${title2}
-%c${content}`, styleTitle1, styleTitle2, styleContent)
