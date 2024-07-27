@@ -156,17 +156,22 @@ $("#social").mouseover(function () {
 });
 
 $("#github").mouseover(function () {
-    $("#link-text").html("For Github");
+    $("#link-text").html("My Github");
+}).mouseout(function () {
+    $("#link-text").html("Contact Me");
+});
+$("#tel").mouseover(function () {
+    $("#link-text").html("Call Me");
 }).mouseout(function () {
     $("#link-text").html("Contact Me");
 });
 $("#qq").mouseover(function () {
-    $("#link-text").html("What's Up~");
+    $("#link-text").html("My QQ");
 }).mouseout(function () {
     $("#link-text").html("Contact Me");
 });
 $("#email").mouseover(function () {
-    $("#link-text").html("Email");
+    $("#link-text").html("Email Me");
 }).mouseout(function () {
     $("#link-text").html("Contact Me");
 });
@@ -175,11 +180,7 @@ $("#bilibili").mouseover(function () {
 }).mouseout(function () {
     $("#link-text").html("Contact Me");
 });
-$("#telegram").mouseover(function () {
-    $("#link-text").html("You Konw ~");
-}).mouseout(function () {
-    $("#link-text").html("Contact Me");
-});
+
 
 //更多页面切换
 let shoemore = false;
