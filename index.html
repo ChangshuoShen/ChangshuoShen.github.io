@@ -145,12 +145,10 @@
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <a id="link-url-3" href="./cv.pdf">
-                                        <div class="link-card cards">
-                                            <i class="fa-regular fa-file"></i>
-                                            <span class="link-name" id="link-name-1">CV</span>
-                                        </div>
-                                    </a>
+                                    <div class="link-card cards" data-target="moreCV">
+                                        <i class="fa-regular fa-file"></i>
+                                        <span class="link-name" id="link-name-1">CV</span>
+                                    </div>
                                 </div>
                             </div>
                             <!--第二组-->
@@ -321,6 +319,15 @@
                             <!-- More extracurricular projects -->
                         </ul>
                     </div>
+                </div>
+            </div>
+
+            <div class="hidden_more" id="moreCV">
+                <div class="close fixed-top" id="closeAboutMe">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </div>
+                <div class="content" style="height: 100%;">
+                    <iframe src="./cv.pdf" width="100%" height="100%" frameborder="0"></iframe>
                 </div>
             </div>
 

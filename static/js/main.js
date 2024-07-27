@@ -236,18 +236,16 @@ window.addEventListener('load', function () {
         if (window.innerWidth >= 600) {
             $('#row').attr('class', 'row');
             $("#menu").html("<i class='fa-solid fa-bars'></i>");
-            //移除移动端切换功能区‘
-            $(targetId).attr('class', 'hidden_more');
+            //移除移动端切换功能区
             $('#rightone').attr('class', 'row rightone');
         }
 
         if (window.innerWidth <= 990) {
             //移动端隐藏更多页面
             $('#container').attr('class', 'container');
-            $(targetId).attr('class', 'hidden_more');
             $("#change").html("Hello&nbsp;World&nbsp;!");
             $("#change1").html("One More Point, Make \"Impossible\" \"I\'m Possible\"");
-
+            $(targetId).attr('class', 'hidden_more');
             //移动端隐藏弹窗页面
             $('#box').css("display", "none");
             $('#row').css("display", "flex");
