@@ -183,18 +183,28 @@ $("#bilibili").mouseover(function () {
 
 
 let showMore = false;
+target = '';
 var targetId = '';
 // 更多页面切换
 $('.link-card').on('click', function () {
-    targetId = '#' + $(this).data('target');
+    target = $(this).data('target');
+    targetId = '#' + target;
     showMore = !showMore;
     console.log(targetId)
     if (showMore && $(document).width() >= 990) {
         $('#container').attr('class', 'container mores');
         $(targetId).attr('class', 'shown_more');
+        iziToast.show({
+            timeout: 1000,
+            message: target + ' has been opened'
+        });
     } else {
         $('#container').attr('class', 'container');
         $(targetId).attr('class', 'hidden_more');
+        iziToast.show({
+            timeout: 1000,
+            message: target + ' has been closed'
+        });
     }
 });
 
@@ -203,6 +213,10 @@ $(document).on('click', '.close', function () {
     $('#container').attr('class', 'container');
     $(targetId).attr('class', 'hidden_more');
     showMore = false;
+    iziToast.show({
+        timeout: 1000,
+        message: target + ' has been closed'
+    });
 });
 
 // 更多页面显示关闭按钮
@@ -227,7 +241,6 @@ $('#switchmenu').on('click', function () {
         $("#menu").html("<i class='fa-solid fa-bars'></i>");
     }
 });
-
 
 //监听网页宽度
 window.addEventListener('load', function () {

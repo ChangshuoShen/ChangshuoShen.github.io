@@ -765,11 +765,10 @@ footer {
 }
 
 .button-link {
-    padding: 15px 60px;
+    padding: auto;
     margin-top: 20px;
     display: inline-block;
-    font-size: 15px;
-    letter-spacing: 2px;
+    text-align: center;
     text-transform: uppercase;
     font-weight: 600;
     position: relative;
