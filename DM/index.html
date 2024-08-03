@@ -7,9 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Boxicons CSS -->
-    <link rel="stylesheet" href="./static/css/boxicons/css/boxicons.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="./static/css/style.css">
     <title>Discrete Math</title>
 </head>
@@ -27,9 +25,8 @@
                 <li class="nav__item"><a class="nav__link" href="#progress">Progress</a></li>
                 <li class="nav__item"><a class="nav__link" href="#assignments">Assignments</a></li>
             </ul>
-            <!-- Humburger icon -->
-            <button id="open-menu-btn"><i class='bx bx-menu'></i></button>
-            <button id="close-menu-btn"><i class='bx bx-x .bx-x' style="font-size: 33px;"></i></button>
+            <button id="open-menu-btn"><i class='fas fa-bars'></i></button>
+            <button id="close-menu-btn"><i class='fas fa-times' style="font-size: 33px;"></i></button>
         </div>
     </nav>
     <!-- Main Content Section -->
@@ -463,28 +460,7 @@
             <small>Copyright &copy; Discrete Mathematics 2024, All rights reserved</small>
         </div>
     </footer>
-
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <!-- Main JS Scripts -->
     <script src="./static/js/script.js"></script>
-    <!-- Initialize Testimonial Swiper -->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            // When Width >= 600px
-            breakpoints: {
-                600: {
-                    slidesPerView: 2
-                }
-            }
-        });
-    </script>
 </body>
 
 </html>
