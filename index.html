@@ -393,6 +393,14 @@
     <div class="noscript fixed-top">Please Start JavaScript</div>
 </noscript>
 <!-- JS -->
+<script>
+    document.addEventListener('keydown', function(e) {
+        if (e.ctrlKey && (e.key === 's' || e.key === 'S')) {
+            e.preventDefault();
+        }
+    });
+</script>
+
 <script type="text/javascript" src="./static/js/main.js"></script>
 <script type="text/javascript" src="./static/js/set_bg.js"></script>
 <script type="text/javascript" src="./static/js/bootstrap.min.js"></script>
