@@ -150,3 +150,12 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+// 根据数值更新进度条
+document.addEventListener("DOMContentLoaded", function () {
+  const skillPercentages = document.querySelectorAll(".skills__percentage");
+  skillPercentages.forEach(skill => {
+    const percentage = skill.getAttribute("data-percentage");
+    skill.style.width = percentage + "%";
+  });
+});
