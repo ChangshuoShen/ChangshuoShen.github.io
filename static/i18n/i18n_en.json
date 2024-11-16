@@ -2,7 +2,7 @@
     "home":"home",
     "about":"about",
     "skills":"skills",
-    "portfolio":"portfolio",
+    "experience":"experience",
     "contact":"contact",
 
     "home__title":"Hi, I'm ShenChangshuo",
@@ -20,24 +20,28 @@
     "about__info-name3":"Interdisciplinary AI Applications",
 
     "cv": "CV",
+    "cv_1page": "CV(1page)",
     "blog": "Blog",
 
     "skills__title":"Skills",
     "skills__subtitle":"My technical level",
 
     "skills__1": "Programming Languages",
-    "skills__years":"More than * years",
+    "skills__years":"More than 3 years",
+
     "skills__2":"Markup & Scripting Languages",
-    "skills__years2":"More than * years",
+    "skills__years2":"More than 2 years",
+
     "skills__3":"Tools & Technologies",
-    "skills__years3":"More than * years",
+    "skills__years3":"More than 3 years",
+    
     "skills__4":"Frameworks & Libraries",
-    "skills__years4":"More than * years",
+    "skills__years4":"More than 2 years",
 
     "qualification__title":"Qualification",
     "qualification__subtitle":"My personal journey",
     "education":"Education",
-    "work":"Work",
+    "work":"Work/Internship",
     "qualification1__title":"Artificial Intelligence & Data Science",
     "qualification1__subtitle":"University of Science & Technology of China ",
 
@@ -49,14 +53,14 @@
     "qualification4__title":"To Be Added...",
     "qualification4__subtitle":"China",
 
-    "portfolio__title":"Portfolio",
-    "portfolio__subtitle":"Most recent works",
-    "portfolio1__title":"Modern Website 1",
-    "portfolio1__description":"Website adaptable to all devices, with ui components and animated interactions.",
-    "portfolio2__title":"Modern Website 2",
-    "portfolio2__description":"Website adaptable to all devices, with ui components and animated interactions.",
-    "portfolio3__title":"Modern Website 3",
-    "portfolio3__description":"Website adaptable to all devices, with ui components and animated interactions.",
+    "experience__title":"Highlighted Experience",
+    "experience__subtitle":"Experiences Selected",
+    "experience1__title":"HKUST Exchange Program",
+    "experience1__description":"Participated in a one-week exchange program at Hong Kong University of Science and Technology (HKUST), focusing on the intersection of machine learning and physics. Attended the 'When Physics Meets Machine Learning' lecture series and explored cutting-edge research guided by leading experts.",
+    "experience2__title":"iGEM Jamboree 2024",
+    "experience2__description":"Represented the USTC-Software team at the iGEM 2024 Jamboree. Delivered project presentations on bioinformatics innovations, interacted with global teams, and contributed to our successful submission in the multi-omics analysis platform category.",
+    "experience3__title":"Modern Website 3",
+    "experience3__description":"Website adaptable to all devices, with ui components and animated interactions.",
     
     "contact__title":"Contact me",
     "contact__subtitle":"Get in touch",

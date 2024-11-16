@@ -70,8 +70,8 @@ tabs.forEach(tab => {
 })
 
 
-/*==================== PORTFOLIO SWIPER  ====================*/
-let swiperPortfolio = new Swiper('.portfolio__container', {
+/*==================== experience SWIPER  ====================*/
+let swiperExperience = new Swiper('.experience__container', {
     cssMode: true,
     loop: true,
   
