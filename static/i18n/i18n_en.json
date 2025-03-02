@@ -4,7 +4,9 @@
     "skills":"skills",
     "experience":"experience",
     "contact":"contact",
-
+    "research":"research",
+    "publications":"publications",
+    
     "home__title":"Hi, I'm ShenChangshuo",
     "home__subtitle":"AI and Data Science Student",
     "home__description":"Passionate about learning, research, and contributing to advancements in AI, data science, and bioinformatics.",

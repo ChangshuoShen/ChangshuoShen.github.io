@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <!--==================== UNICONS 图标====================-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css"/>
+    <!--==================== SWIPER CSS ====================-->
+    <link rel="stylesheet" href="./static/css/swiper-bundle.min.css" />
+
+    <!--==================== CSS ====================-->
+    <link rel="stylesheet" href="./static/css/styles.css" />
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <meta name="keywords" content="申长硕, USTC, 中国科学技术大学, 人工智能与数据科学学院, 人工智能, AI, Artificial Intelligence, Machine Learning, Deep Learning, Computer Vision, Natural Language Processing, Data Science, Computer Science, CS, 计算机科学, 机器学习, 深度学习, 计算机视觉, 自然语言处理, 数据科学" />
+    <meta name="description" content="申长硕的个人主页 | Changshuo Shen's Personal Website" />
+    <meta name="author" content="Changshuo Shen" />
+    <title>Changshuo Shen</title>
+  </head>
+  <body>
+    <!--==================== HEADER ====================-->
+    <header class="header scroll-header" id="header">
+      <nav class="nav container">
+        <a href="https://changshuoshen.github.io/" class="nav__logo">Changshuo Shen</a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list grid">
+            <li class="nav__item">
+              <a href="https://changshuoshen.github.io/" class="nav__link">
+                <i class="uil uil-estate nav__icon"></i>
+                <p i18n="home">Home</p>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="./research.html" class="nav__link">
+                <i class="uil uil-user nav__icon"></i>
+                <p i18n="research">Research</p>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="./publications.html" class="nav__link">
+                <i class="uil uil-file-alt nav__icon"></i>
+                <p i18n="publicatoins">Publications</p>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="./contact.html" class="nav__link">
+                <i class="uil uil-message nav__icon"></i>
+                <p i18n="contact">Contactme</p>
+              </a>
+            </li>
+            <!--<li class="nav__item">
+              <div class="nav__link" id="translate" value="en">
+                <svg class="icon nav__icon-svg" aria-hidden="true">
+                  <use xlink:href="#icon-fanyi"></use>
+                </svg>
+                <a class="=nav__link" id="nav__translate">Translate</a>
+              </div>
+            </li>-->
+          </ul>
+          <i class="uil uil-times nav__close" id="nav-close"></i>
+        </div>
+
+        <div class="nav__btns">
+          <i class="uil uil-moon change-theme" id="theme-button"></i>
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="uil uil-apps"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+      
+      <!--==================== CONTACT ME ====================-->
+      <section class="section" id="contact">
+        <h2 class="section__title" i18n="contact__title">Contact me</h2>
+        <span class="section__subtitle" i18n="contact__subtitle">
+          Get in touch
+        </span>
+
+        <div class="content__container container grid">
+          <div>
+            <div class="content__item">
+              <i class="uil uil-phone-alt content__icon"></i>
+              <div>
+                <h3 class="content__title" i18n="tel">Call me</h3>
+                <span class="content__description" i18n="tel__number">
+                  18790691295
+                </span>
+              </div>
+            </div>
+
+            <div class="content__item">
+              <i class="uil uil-envelope content__icon"></i>
+              <div>
+                <h3 class="content__title" i18n="email">E-mail</h3>
+                <span class="content__description" i18n="email__address">
+                  stephenshenc@gmail.com
+                </span>
+              </div>
+            </div>
+
+            <div class="content__item">
+              <i class="uil uil-map-marker content__icon"></i>
+              <div>
+                <h3 class="content__title" i18n="location">Location</h3>
+                <span class="content__description" i18n="location__detail">
+                  HeFei , CHN
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--==================== SWIPER JS ====================-->
+    <script src="./static/js/swiper-bundle.min.js"></script>
+
+    <!-- iconfont JS -->
+    <script src="./static/js/iconfont.js"></script>
+    <!-- jquery -->
+    <script src="./static/js/jquery2.1.4.min.js"></script>
+    <script src="./static/js/jquery.i18n.min.js"></script>
+    <!--==================== MAIN JS ====================-->
+    <script src="./static/js/main-home.js"></script>
+
+    <!-- translate JS -->
+    <script src="./static/js/cn-en-translate.js"></script>
+  </body>
+</html>

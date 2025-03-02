@@ -12,56 +12,51 @@
     <!--==================== CSS ====================-->
     <link rel="stylesheet" href="./static/css/styles.css" />
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-    <meta name="keywords" content="申长硕, USTC, 中国科学技术大学, 人工智能与数据科学学院, 人工智能" />
-    
+    <meta name="keywords" content="申长硕, USTC, 中国科学技术大学, 人工智能与数据科学学院, 人工智能, AI, Artificial Intelligence, Machine Learning, Deep Learning, Computer Vision, Natural Language Processing, Data Science, Computer Science, CS, 计算机科学, 机器学习, 深度学习, 计算机视觉, 自然语言处理, 数据科学" />
+    <meta name="description" content="申长硕的个人主页 | Changshuo Shen's Personal Website" />
+    <meta name="author" content="Changshuo Shen" />
     <title>Changshuo Shen</title>
   </head>
   <body>
     <!--==================== HEADER ====================-->
     <header class="header scroll-header" id="header">
       <nav class="nav container">
-        <a href="#" class="nav__logo">Changshuo Shen</a>
+        <a href="https://changshuoshen.github.io/" class="nav__logo">Changshuo Shen</a>
 
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list grid">
             <li class="nav__item">
-              <a href="#home" class="nav__link">
+              <a href="https://changshuoshen.github.io/" class="nav__link">
                 <i class="uil uil-estate nav__icon"></i>
                 <p i18n="home">Home</p>
               </a>
             </li>
             <li class="nav__item">
-              <a href="#about" class="nav__link">
+              <a href="./research.html" class="nav__link">
                 <i class="uil uil-user nav__icon"></i>
-                <p i18n="about">About</p>
+                <p i18n="research">Research</p>
               </a>
             </li>
             <li class="nav__item">
-              <a href="#skills" class="nav__link">
+              <a href="./publications.html" class="nav__link">
                 <i class="uil uil-file-alt nav__icon"></i>
-                <p i18n="skills">Skills</p>
+                <p i18n="publicatoins">Publications</p>
               </a>
             </li>
             <li class="nav__item">
-              <a href="#experience" class="nav__link">
-                <i class="uil uil-scenery nav__icon"></i>
-                <p i18n="experience">experience</p>
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#contact" class="nav__link">
+              <a href="./contact.html" class="nav__link">
                 <i class="uil uil-message nav__icon"></i>
                 <p i18n="contact">Contactme</p>
               </a>
             </li>
-            <li class="nav__item">
+            <!--<li class="nav__item">
               <div class="nav__link" id="translate" value="en">
                 <svg class="icon nav__icon-svg" aria-hidden="true">
                   <use xlink:href="#icon-fanyi"></use>
                 </svg>
                 <a class="=nav__link" id="nav__translate">Translate</a>
               </div>
-            </li>
+            </li>-->
           </ul>
           <i class="uil uil-times nav__close" id="nav-close"></i>
         </div>
@@ -193,6 +188,43 @@
         </div>
       </section>
 
+      <!--==================== Education ====================-->
+      <section class="qualification section" id="education">
+        <h2 class="section__title" i18n="education__title">Education</h2>
+        <span class="section__subtitle" i18n="education__subtitle">Academic Experience</span>
+
+        <div class="content__container container grid">
+          <div class="content__item">
+            <i class="uil uil-graduation-cap content__icon"></i>
+            <div>
+              <h3 class="content__title" i18n="education1__title">Bachelor's Degree</h3>
+              <a href="https://ustc.edu.cn/" class="text-decoration-none">
+                <span class="content__description" i18n="education1__institution">University of Science & Technology of China</span>
+              </a>
+              <a href="https://saids.ustc.edu.cn/" class="text-decoration-none">
+                <span class="content__description" i18n="education1__department">School of Artificial Intelligence and Data Science</span>
+              </a>
+              <div class="content__description">
+                <i class="uil uil-calendar-alt"></i> <span i18n="education1__duration">2022 - 2026</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="content__item">
+            <i class="uil uil-graduation-cap content__icon"></i>
+            <div>
+              <h3 class="content__title" i18n="education3__title">Future Studies</h3>
+              <span class="content__description" i18n="education3__institution">To Be Announced</span>
+              <div class="content__description">
+                <i class="uil uil-calendar-alt"></i> <span i18n="education3__duration">TBD</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
       <!--==================== SKILLS ====================-->
       <section class="skills section" id="skills">
         <h2 class="section__title" i18n="skills__title">Skills</h2>
@@ -200,339 +232,122 @@
           My technical level
         </span>
 
-        <div class="skills__container container grid">
+        <div class="content__container container grid">
           <div>
-            <!--==================== SKILLS 1 ====================-->
-            <div class="skills__content skills__open">
-              <div class="skills__header">
-                <i class="uil uil-brackets-curly skills__icon"></i>
-
-                <div>
-                  <h1 class="skills__title" i18n="skills__1">
-                    Programming Languages
-                  </h1>
-                  <span class="skills__subtitle" i18n="skills__years">
-                    More than 2 years
-                  </span>
-                </div>
-
-                <i class="uil uil-angle-down skills__arrow"></i>
-              </div>
-
-              <div class="skills__list grid">
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">Python</h3>
-                    <span class="skills__number">70%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <div class="skills__percentage" data-percentage="70"></div>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">C & CPP</h3>
-                    <span class="skills__number">60%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <div class="skills__percentage" data-percentage="60"></div>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">Java</h3>
-                    <span class="skills__number">50%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <div class="skills__percentage" data-percentage="50"></div>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">R</h3>
-                    <span class="skills__number">40%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <div class="skills__percentage" data-percentage="40"></div>
-                  </div>
-                </div>
+            <div class="content__item">
+              <i class="uil uil-code-branch content__icon"></i>
+              <div>
+                <h3 class="content__title" i18n="skills__1">Programming Languages</h3>
+                <span class="content__description" i18n="skills__1_desc">
+                  Python, C/C++, JavaScript, Java, R
+                </span>
               </div>
             </div>
 
-            <!--==================== SKILLS 2 ====================-->
-            <div class="skills__content skills__close">
-              <div class="skills__header">
-                <i class="uil uil-server-network skills__icon"></i>
-
-                <div>
-                  <h1 class="skills__title" i18n="skills__2">
-                    Markup & Scriping
-                  </h1>
-                  <span class="skills__subtitle" i18n="skills__years2"
-                    >More than 2 years
-                  </span>
-                </div>
-
-                <i class="uil uil-angle-down skills__arrow"></i>
+            <div class="content__item">
+              <i class="uil uil-file-alt content__icon"></i>
+              <div>
+                <h3 class="content__title" i18n="skills__2">Markup & Scriping</h3>
+                <span class="content__description" i18n="skills__2_desc">
+                  LaTeX, HTML, CSS, JavaScript
+                </span>
               </div>
-
-              <div class="skills__list grid">
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">LaTeX</h3>
-                    <span class="skills__number">65%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <div class="skills__percentage" data-percentage="65"></div>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">HTML / CSS / JavaScript</h3>
-                    <span class="skills__number">70%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <div class="skills__percentage" data-percentage="70"></div>
-                  </div>
-                </div>
+            </div>
+            
+            <div class="content__item">
+              <i class="uil uil-wrench content__icon"></i>
+              <div>
+                <h3 class="content__title" i18n="skills__3">Tools & Technologies</h3>
+                <span class="content__description" i18n="skills__3_desc">
+                  Git, Github, MySQL, Linux, Docker
+                </span>
               </div>
             </div>
 
-            <!--==================== SKILLS 3 ====================-->
-            <div class="skills__content skills__close">
-              <div class="skills__header">
-                <i class="uil uil-server-network skills__icon"></i>
-
-                <div>
-                  <h1 class="skills__title" i18n="skills__3">
-                    Tools & Technologies
-                  </h1>
-                  <span class="skills__subtitle" i18n="skills__years2"
-                    >More than 3 years
-                  </span>
-                </div>
-
-                <i class="uil uil-angle-down skills__arrow"></i>
+            <div class="content__item">
+              <i class="uil uil-layer-group content__icon"></i>
+              <div>
+                <h3 class="content__title" i18n="skills__4">Framework & Libraries</h3>
+                <span class="content__description" i18n="skills__4_desc">
+                  PyTorch, Django, OpenCV, NumPy, Pandas, Scikit-learn
+                </span>
               </div>
-
-              <div class="skills__list grid">
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">Git / Github</h3>
-                    <span class="skills__number">65%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <div class="skills__percentage" data-percentage="65"></div>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">MySQL</h3>
-                    <span class="skills__number">60%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <div class="skills__percentage" data-percentage="60"></div>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">Linux</h3>
-                    <span class="skills__number">55%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <div class="skills__percentage" data-percentage="55"></div>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">Docker</h3>
-                    <span class="skills__number">45%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <div class="skills__percentage" data-percentage="45"></div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            <!--==================== SKILLS 4 ====================-->
-            <div class="skills__content skills__close">
-              <div class="skills__header">
-                <i class="uil uil-server-network skills__icon"></i>
-
-                <div>
-                  <h1 class="skills__title" i18n="skills__4">
-                    Framework & Libraries
-                  </h1>
-                  <span class="skills__subtitle" i18n="skills__years2"
-                    >More than 2 years</span
-                  >
-                </div>
-
-                <i class="uil uil-angle-down skills__arrow"></i>
-              </div>
-
-              <div class="skills__list grid">
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">PyTorch</h3>
-                    <span class="skills__number">60%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <div class="skills__percentage" data-percentage="60"></div>
-                  </div>
-                </div>
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">Django</h3>
-                    <span class="skills__number">70%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <div class="skills__percentage" data-percentage="70"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            </div>  
+            
           </div>
         </div>
       </section>
 
-      <!--==================== QUALIFICATION ====================-->
-      <section class="qualification section">
-        <h2 class="section__title" i18n="qualification__title">
-          Qualification
-        </h2>
-        <span class="section__subtitle" i18n="qualification__subtitle"
-          >My personal journey</span
-        >
-        <div class="qualification__container container">
-          <div class="qualification__tabs">
-            <div
-              class="qualification__button button--flex qualification__active"
-              data-target="#education"
-            >
-              <i class="uil uil-graduation-cap qualification__icon"></i>
-              <span i18n="education">Education</span>
-            </div>
 
-            <div class="qualification__button button--flex" data-target="#work">
-              <i class="uil uil-briefcase-alt qualification__icon"></i>
-              <span i18n="work">Work/Internship</span>
-            </div>
-          </div>
-          <div class="qualification__sections">
-            <!--==================== QUALIFICATION CONTENT 1 ====================-->
-            <div
-              class="qualification__content qualification__active"
-              data-content
-              id="education"
-            >
-              <!--==================== QUALIFICATION 1 ====================-->
-              <div class="qualification__data">
-                <div>
-                  <h3 class="qualification__title" i18n="qualification1__title">
-                    Artificial Intelligence & Data Science
-                  </h3>
-                  <a href="https://ustc.edu.cn/" class="text-decoration-none"><span
-                    class="qualification__subtitle"
-                    i18n="qualification1__subtitle"
-                    >University of Science & Technology of China
-                  </span></a>
-                  <div class="qualification__calendar">
-                    <i class="uil uil-calendar-alt"></i>
-                    2022 - 2026
-                  </div>
-                </div>
-
-                <div>
-                  <span class="qualification__rounder"></span>
-                  <span class="qualification__line"></span>
-                </div>
-              </div>
-              <!--==================== QUALIFICATION 2 ====================-->
-              <div class="qualification__data">
-                <div></div>
-                <div>
-                  <span class="qualification__rounder"></span>
-                  <span class="qualification__line"></span>
-                </div>
-
-                <div>
-                  <h3 class="qualification__title" i18n="qualification2__title">
-                    To Be Added...
-                  </h3>
-                  <span
-                    class="qualification__subtitle"
-                    i18n="qualification2__subtitle"
-                    >* University</span
-                  >
-                  <div class="qualification__calendar">
-                    <i class="uil uil-calendar-alt"></i>
-                    2026 - ...
-                  </div>
-                </div>
-              </div>
-              <!--==================== QUALIFICATION 3 ====================-->
-              <div class="qualification__data">
-                <div>
-                  <h3 class="qualification__title" i18n="qualification3__title">
-                    To Be Added...
-                  </h3>
-                  <span
-                    class="qualification__subtitle"
-                    i18n="qualification3__subtitle"
-                    >* University</span
-                  >
-                  <div class="qualification__calendar">
-                    <i class="uil uil-calendar-alt"></i>
-                    2026 - ...
-                  </div>
-                </div>
-
-                <div>
-                  <span class="qualification__rounder"></span>
-                  <!-- <span class="qualification__line"></span> -->
-                </div>
-              </div>
-            </div>
-            <!--==================== QUALIFICATION CONTENT 2 ====================-->
-            <div class="qualification__content" data-content id="work">
-              <!--==================== QUALIFICATION 1 ====================-->
-              <div class="qualification__data">
-                <div></div>
-                <div>
-                  <span class="qualification__rounder"></span>
-                  <!-- <span class="qualification__line"></span> -->
-                </div>
-                <div>
-                  <h3 class="qualification__title" i18n="qualification4__title">
-                    Software Enginner
-                  </h3>
-                  <span
-                    class="qualification__subtitle"
-                    i18n="qualification4__subtitle"
-                    >ShenZhen</span
-                  >
-                  <div class="qualification__calendar">
-                    <i class="uil uil-calendar-alt"></i>
-                    2024
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      <!--==================== Awards ====================-->
+      <section class="section" id="awards&scholarships">
+        <h2 class="section__title" i18n="awards__title">Awards & Scholarships</h2>
+        <span class="section__subtitle" i18n="awards__subtitle">
+          Honors and Achievements
+        </span>
+        
+        <div class="container">
+          <p class="award__item">
+            <span class="award__title" i18n="award4__title">
+              <i class="uil uil-medal"></i> Huawei Scholarship
+            </span>
+            <span class="award__description">
+              <span i18n="award4__institution">USTC</span> | 
+              <i class="uil uil-calendar-alt"></i> <span i18n="award4__date">11/2024</span>
+            </span>
+          </p>
+          <p class="award__item">
+            <span class="award__title" i18n="award5__title">
+              <i class="uil uil-medal"></i> National Encouragement Scholarship
+            </span>
+            <span class="award__description">
+              <span i18n="award5__institution">USTC</span> | 
+              <i class="uil uil-calendar-alt"></i> <span i18n="award5__date">11/2024</span>
+            </span>
+          </p>
+          
+          <p class="award__item">
+            <span class="award__title" i18n="award3__title">
+              <i class="uil uil-medal"></i> Di'ao Scholarship
+            </span>
+            <span class="award__description">
+              <span i18n="award3__institution">USTC</span> | 
+              <i class="uil uil-calendar-alt"></i> <span i18n="award3__date">11/2023</span>
+            </span>
+          </p>
+          <p class="award__item">
+            <span class="award__title" i18n="award1__title">
+              <i class="uil uil-medal"></i> Outstanding Freshman Award
+            </span>
+            <span class="award__description">
+              <span i18n="award1__institution">USTC</span> | 
+              <i class="uil uil-calendar-alt"></i> <span i18n="award1__date">11/2022</span>
+            </span>
+          </p>
+          <p class="award__item">
+            <span class="award__title" i18n="award2__title">
+              <i class="uil uil-medal"></i> Basic Disciplines of The Top Plan Student Funding (Yan Jici Talent Program in Physics)
+            </span>
+            <span class="award__description">
+              <span i18n="award2__institution">USTC</span> | 
+              <i class="uil uil-calendar-alt"></i> <span i18n="award2__date">11/2022</span>
+            </span>
+          </p>
+          <p class="award__item">
+            <span class="award__title" i18n="award6__title">
+              <i class="uil uil-medal"></i> Second Prize in the 15th National College Student Mathematics Competition
+            </span>
+            <span class="award__description">
+              <span i18n="award6__institution">CMS</span> | 
+              <i class="uil uil-calendar-alt"></i> <span i18n="award6__date">1/2024</span>
+            </span>
+          </p>
         </div>
       </section>
 
+
+
+      
       <!--==================== experience ====================-->
       <section class="experience section" id="experience">
         <h2 class="section__title" i18n="experience__title">Extracurricular Activities</h2>
@@ -620,42 +435,39 @@
       </section>
 
       <!--==================== CONTACT ME ====================-->
-      <section class="contact section" id="contact">
+      <section class="section" id="contact">
         <h2 class="section__title" i18n="contact__title">Contact me</h2>
         <span class="section__subtitle" i18n="contact__subtitle">
           Get in touch
         </span>
 
-        <div class="contact__container container grid">
+        <div class="content__container container grid">
           <div>
-            <div class="contact__information">
-              <i class="uil uil-phone-alt contact__icon"></i>
-
+            <div class="content__item">
+              <i class="uil uil-phone-alt content__icon"></i>
               <div>
-                <h3 class="contact__title" i18n="tel">Call me</h3>
-                <span class="contact__subtitle" i18n="tel__number">
+                <h3 class="content__title" i18n="tel">Call me</h3>
+                <span class="content__description" i18n="tel__number">
                   18790691295
                 </span>
               </div>
             </div>
 
-            <div class="contact__information">
-              <i class="uil uil-envelope contact__icon"></i>
-
+            <div class="content__item">
+              <i class="uil uil-envelope content__icon"></i>
               <div>
-                <h3 class="contact__title" i18n="email">E-mail</h3>
-                <span class="contatc__subtitle" i18n="email__address">
+                <h3 class="content__title" i18n="email">E-mail</h3>
+                <span class="content__description" i18n="email__address">
                   stephenshenc@gmail.com
                 </span>
               </div>
             </div>
 
-            <div class="contact__information">
-              <i class="uil uil-map-marker contact__icon"></i>
-
+            <div class="content__item">
+              <i class="uil uil-map-marker content__icon"></i>
               <div>
-                <h3 class="contact__title" i18n="location">Location</h3>
-                <span class="contatc__subtitle" i18n="location__detail">
+                <h3 class="content__title" i18n="location">Location</h3>
+                <span class="content__description" i18n="location__detail">
                   HeFei , CHN
                 </span>
               </div>
@@ -671,9 +483,6 @@
         <div class="footer__container container grid">
           <div>
             <h1 class="footer__title">Changshuo Shen</h1>
-            <span class="footer__subtitle" i18n="home__subtitle">
-              AI Enthusiast
-            </span>
           </div>
 
           <ul class="footer__links">
@@ -681,7 +490,7 @@
               <a href="#skills" class="footer__link" i18n="skills">Skills</a>
             </li>
             <li>
-              <a href="#portfFrontend developerolio" class="footer__link" i18n="experience">
+              <a href="#experience" class="footer__link" i18n="experience">
                 experience
               </a>
             </li>
@@ -712,17 +521,6 @@
             </a>
           </div>
         </div>
-
-        <p class="footer__copy">
-          &#169; 
-          <a
-            class="footer__copy"
-            href="https://space.bilibili.com/1482831256?spm_id_from=333.937.0.0"
-            target="_blank"
-            >Changshuo Shen</a
-          >
-        </p>
-
       </div>
     </footer>
 

@@ -4,13 +4,16 @@
     "skills": "技能",
     "experience": "经历",
     "contact": "联系方式",
+    "research": "研究",
+    "publications": "论文",
+
 
     "home__title": "嗨，我是申长硕",
     "home__subtitle": "人工智能与数据科学专业学生",
     "home__description": "热爱学习、研究，并致力于推动人工智能、数据科学和生物信息学领域的进步。",
     "home__contact": "与我联系",
     "home__scroll-name": "向下滑动",
-
+    
     "about__title": "关于我",
     "about__subtitle": "简要介绍",
     "about__description": "中国科学技术大学人工智能与数据科学专业本科生。<br/>我的兴趣包括：",
