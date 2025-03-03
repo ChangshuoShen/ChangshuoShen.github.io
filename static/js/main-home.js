@@ -48,27 +48,6 @@ const skillsContent = document.getElementsByClassName('skills__content'),
         el.addEventListener('click', toggleSkills)
       })
 
-/*==================== QUALIFICATION TABS ====================*/
-const tabs = document.querySelectorAll('[data-target]'),
-      tabContents = document.querySelectorAll('[data-content]')
-
-tabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    console.log('click disparado')
-    const target = document.querySelector(tab.dataset.target)
-
-    tabContents.forEach(tabContent => {
-      tabContent.classList.remove('qualification__active')
-    })
-    target.classList.add('qualification__active')
-
-    tabs.forEach(tab => {
-      tab.classList.remove('qualification__active')
-    })
-    tab.classList.add('qualification__active')
-  })
-})
-
 
 /*==================== experience SWIPER  ====================*/
 let swiperExperience = new Swiper('.experience__container', {
@@ -120,42 +99,35 @@ function scrollUp(){
   window.addEventListener('scroll', scrollUp)
 
 /*==================== DARK LIGHT THEME & LANGUAGE====================*/ 
+const themeButton = document.getElementById('theme-button');
+const darkTheme = 'dark-theme';
+const iconTheme = 'uil-sun';
+const nameImage = document.getElementById('name-image');
 
-const themeButton = document.getElementById('theme-button')
-const darkTheme = 'dark-theme'
-const iconTheme = 'uil-sun'
-const language = 'cn'
+// 获取用户之前选择的主题和图标
+const selectedTheme = localStorage.getItem('selected-theme');
+const selectedIcon = localStorage.getItem('selected-icon');
 
-// Previously selected topic (if user selected)
-const selectedTheme = localStorage.getItem('selected-theme')
-const selectedIcon = localStorage.getItem('selected-icon')
+// 获取当前主题和图标
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light';
+const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun';
 
-// We obtain the current theme that the interface has by validating the dark-theme class
-const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
-const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun'
-
-// We validate if the user previously chose a topic
+// 如果用户之前选择了主题，则应用该主题
 if (selectedTheme) {
-  // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
-  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
-  themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme)
+  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
+  themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme);
+  if (nameImage) {
+    nameImage.src = selectedTheme === 'dark' ? './static/imgs/icon/name2.png' : './static/imgs/icon/name1.png';
+  }
 }
 
-// Activate / deactivate the theme manually with the button
+// 监听主题按钮的点击事件，切换主题
 themeButton.addEventListener('click', () => {
-    // Add or remove the dark / icon theme
-    document.body.classList.toggle(darkTheme)
-    themeButton.classList.toggle(iconTheme)
-    // We save the theme and the current icon that the user chose
-    localStorage.setItem('selected-theme', getCurrentTheme())
-    localStorage.setItem('selected-icon', getCurrentIcon())
-})
-
-// 根据数值更新进度条
-document.addEventListener("DOMContentLoaded", function () {
-  const skillPercentages = document.querySelectorAll(".skills__percentage");
-  skillPercentages.forEach(skill => {
-    const percentage = skill.getAttribute("data-percentage");
-    skill.style.width = percentage + "%";
-  });
+  document.body.classList.toggle(darkTheme);
+  themeButton.classList.toggle(iconTheme);
+  localStorage.setItem('selected-theme', getCurrentTheme());
+  localStorage.setItem('selected-icon', getCurrentIcon());
+  if (nameImage) {
+    nameImage.src = getCurrentTheme() === 'dark' ? './static/imgs/icon/name2.png' : './static/imgs/icon/name1.png';
+  }
 });
