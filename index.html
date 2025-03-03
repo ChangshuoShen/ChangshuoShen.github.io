@@ -49,15 +49,11 @@
                 <p i18n="contact">Contactme</p>
               </a>
             </li>
-            <li class="nav__item nav__dropdown">
+            <li class="nav__item">
               <a href="./cv.pdf" class="nav__link">
                 <i class="uil uil-file-alt nav__icon"></i>
                 <p i18n="cv">CV</p>
               </a>
-              <ul class="nav__dropdown-content">
-                <li><a href="./cv.pdf" i18n="cv">CV</a></li>
-                <li><a href="./cv_1_page.pdf" i18n="cv_1_page">CV (1 Page)</a></li>
-              </ul>
             </li>
             <li class="nav__item">
               <a href="https://changshuoshen.github.io/blog" class="nav__link">
@@ -120,7 +116,7 @@
 
             <div class="home__data">
               <h1 class="home__title" i18n="home__title">
-                Hi, I'm Changshuo Shen
+                <img src="./static/imgs/icon/name.png" alt="Changshuo Shen">
               </h1>
               <h3 class="home__subtitle" i18n="home__subtitle">
                 AI and Data Science Enthusiast
@@ -139,7 +135,7 @@
             </div>
           </div>
           <div class="home__scroll">
-            <a href="#about" class="home__scroll-button button--flex">
+            <a href="#research" class="home__scroll-button button--flex">
               <i class="uil uil-mouse-alt-2 home__scroll-mouse"></i>
               <span class="home__scroll-name" i18n="home__scroll-name"
                 >Scroll down</span
@@ -150,69 +146,56 @@
         </div>
       </section>
 
-      <!--==================== ABOUT ====================-->
-      <section class="about section" id="about">
-        <h2 class="section__title" i18n="about__title">About Me</h2>
-        <span class="section__subtitle" i18n="about__subtitle"
-          >My introduction</span
-        >
-        <div class="about__container container grid">
-          <img src="./static/imgs/tmp/about.png" alt="" class="about__img" />
+      <!--==================== Research Interest ====================-->
+      <section class="section" id="research">
+        <h2 class="section__title" i18n="research__title">Research Interest</h2>
+        <span class="section__subtitle" i18n="research__subtitle">
+          My research areas
+        </span>
 
-          <div class="about__data">
-            <p class="about__description" i18n="about__description">
-              Undergraduate student majoring in AI and Data Science at USTC (University of Science & Technology of China). My interests include:
-            </p>
-
-            <div class="about__info">
+        <div class="content__container container grid">
+          <div>
+            <div class="content__item">
+              <i class="uil uil-brain content__icon"></i>
               <div>
-                <span class="about__info-title">LLM</span>
-                <span class="about__info-name" i18n="about__info-name1">
-                  Large Language Models
+                <h3 class="content__title" i18n="research__area1">Large Language Models</h3>
+                <span class="content__description" i18n="research__desc1">
+                  Development, Optimization, Applications
                 </span>
               </div>
+            </div>
 
+            <div class="content__item">
+              <i class="uil uil-shield-check content__icon"></i>
               <div>
-                <span class="about__info-title">AI Safety</span>
-                <span class="about__info-name" i18n="about__info-name2">
+                <h3 class="content__title" i18n="research__area2">AI Safety</h3>
+                <span class="content__description" i18n="research__desc2">
                   Risk Assessment, Mitigation Strategies, Ethical AI
                 </span>
               </div>
+            </div>
 
+            <div class="content__item">
+              <i class="uil uil-eye content__icon"></i>
               <div>
-                <span class="about__info-title">Explainability</span>
-                <span class="about__info-name" i18n="about__info-name3">
+                <h3 class="content__title" i18n="research__area3">Explainability</h3>
+                <span class="content__description" i18n="research__desc3">
                   Interpretability, Transparency, Model Understanding
                 </span>
               </div>
+            </div>
 
+            <div class="content__item">
+              <i class="uil uil-robot content__icon"></i>
               <div>
-                <span class="about__info-title">LLM Agents</span>
-                <span class="about__info-name" i18n="about__info-name4">
+                <h3 class="content__title" i18n="research__area4">LLM Agents</h3>
+                <span class="content__description" i18n="research__desc4">
                   Autonomous Systems, Multi-Agent Systems, Agent-Based Modeling
                 </span>
               </div>
             </div>
-
-            <div class="about__buttons">
-              <a href="./cv.pdf" class="button button--flex">
-                <span i18n="cv">CV</span>
-                <i class="fa-solid fa-user"></i>
-              </a>
-              &nbsp;
-              <a href="./cv_1page.pdf" class="button button--flex">
-                <span i18n="cv_1page">CV in 1 page</span>
-                <i class="fa-regular fa-user"></i>
-              </a>
-              &nbsp;
-              <a href="https://changshuoshen.github.io/blog" class="button button--flex">
-                <span i18n="blog">Blog</span>
-                <i class="fa-solid fa-blog"></i>
-              </a>
-            </div>
           </div>
         </div>
-      </section>
       </section>
 
       <!--==================== Education ====================-->
