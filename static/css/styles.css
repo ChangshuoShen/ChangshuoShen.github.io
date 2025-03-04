@@ -177,6 +177,7 @@ img {
 }
 
 .header {
+  font-size: var(--h3-font-size);
   width: 100%;
   position: fixed;
   bottom: 0;
