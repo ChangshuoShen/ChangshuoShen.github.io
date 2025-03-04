@@ -736,6 +736,7 @@ img {
   .nav__list {
       column-gap: 0;
   }
+
   .home__content {
       grid-template-columns: .25fr 3fr;
   }
