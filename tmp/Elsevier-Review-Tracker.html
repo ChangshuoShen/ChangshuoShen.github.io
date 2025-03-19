@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elsevier Review Tracker</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #4a90e2;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #357ab8;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fafafa;
+        }
+        .result h2 {
+            margin-top: 0;
+            color: #4a90e2;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Elsevier Review Tracker</h1>
+        <form id="uuidForm">
+            <label for="uuid">Enter UUID:</label>
+            <input type="text" id="uuid" name="uuid" required>
+            <button type="submit">Fetch Manuscript Info</button>
+        </form>
+        <div id="result" class="result" style="display: none;">
+            <h2>Manuscript Information</h2>
+            <div id="paperInfo"></div>
+            <h2>Review Events</h2>
+            <div id="reviewEvents"></div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('uuidForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const uuid = document.getElementById('uuid').value;
+            fetchManuscriptInfo(uuid);
+        });
+
+        function fetchManuscriptInfo(uuid) {
+            const url = `https://tnlkuelk67.execute-api.us-east-1.amazonaws.com/tracker/${uuid}`;
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    displayPaperInfo(data);
+                    displayReviewEvents(data);
+                })
+                .catch(error => {
+                    console.error('Error fetching manuscript info:', error);
+                    alert('Failed to fetch manuscript information. Please check the UUID and try again.');
+                });
+        }
+
+        function displayPaperInfo(data) {
+            const paperInfoDiv = document.getElementById('paperInfo');
+            paperInfoDiv.innerHTML = `
+                <p><strong>Title:</strong> ${data.ManuscriptTitle}</p>
+                <p><strong>Submission Number:</strong> ${data.PubdNumber}</p>
+                <p><strong>Journal Name:</strong> ${data.JournalName} (${data.JournalAcronym})</p>
+                <p><strong>First Author:</strong> ${data.FirstAuthor}</p>
+                <p><strong>Corresponding Author:</strong> ${data.CorrespondingAuthor}</p>
+                <p><strong>Submission Date:</strong> ${new Date(data.SubmissionDate * 1000).toLocaleString()}</p>
+                <p><strong>Last Updated:</strong> ${new Date(data.LastUpdated * 1000).toLocaleString()}</p>
+                <p><strong>Latest Revision Number:</strong> R${data.LatestRevisionNumber}</p>
+            `;
+            document.getElementById('result').style.display = 'block';
+        }
+
+        function displayReviewEvents(data) {
+            const reviewEventsDiv = document.getElementById('reviewEvents');
+            const events = data.ReviewEvents;
+            let html = '<table><tr><th>Date</th><th>Event</th><th>Revision</th><th>ID</th></tr>';
+            events.forEach(event => {
+                html += `<tr>
+                    <td>${new Date(event.Date * 1000).toLocaleString()}</td>
+                    <td>${getEventName(event.Event)}</td>
+                    <td>R${event.Revision}</td>
+                    <td>${event.Id}</td>
+                </tr>`;
+            });
+            html += '</table>';
+            reviewEventsDiv.innerHTML = html;
+        }
+
+        function getEventName(eventType) {
+            const eventMap = {
+                'REVIEWER_INVITED': 'Reviewer Invited',
+                'REVIEWER_ACCEPTED': 'Reviewer Accepted',
+                'REVIEWER_COMPLETED': 'Reviewer Completed'
+            };
+            return eventMap[eventType] || eventType;
+        }
+    </script>
+</body>
+</html>
