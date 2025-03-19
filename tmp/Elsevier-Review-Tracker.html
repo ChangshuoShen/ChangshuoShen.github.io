@@ -12,7 +12,7 @@
             color: #333;
         }
         .container {
-            max-width: 700px;
+            max-width: 100%;
             margin: auto;
             background-color: #fff;
             padding: 20px;
@@ -59,6 +59,9 @@
             margin-top: 0;
             color: #4a90e2;
         }
+        .table-wrapper {
+            overflow-x: auto;
+        }
         table {
             width: 100%;
             border-collapse: collapse;
@@ -86,7 +89,9 @@
             <h2>Manuscript Information</h2>
             <div id="paperInfo"></div>
             <h2>Review Events</h2>
-            <div id="reviewEvents"></div>
+            <div class="table-wrapper">
+                <div id="reviewEvents"></div>
+            </div>
         </div>
     </div>
 
