@@ -75,5 +75,9 @@
     "email": "电子邮箱",
     "email__address": "stephenshenc@gmail.com",
     "location": "地点",
-    "location__detail": "中国合肥"
+    "location__detail": "中国合肥",
+
+    "publications__title":"论文",
+    "published":"已发表",
+    "preprints":"预印本"
 }

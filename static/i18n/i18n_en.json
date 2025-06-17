@@ -71,5 +71,9 @@
     "email":"E-mail",
     "email__address":"stephenshenc@gmail.com",
     "location":"Location",
-    "location__detail":"HeFei , CHN"
+    "location__detail":"HeFei , CHN",
+
+    "publications__title":"Publications",
+    "published":"* Equal contribution; † Corresponding author<br>Published Papers",
+    "preprints":"Preprints"
 }
