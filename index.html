@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <!--==================== UNICONS 图标====================-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css"/>
+    <!--==================== SWIPER CSS ====================-->
+    <link rel="stylesheet" href="./static/css/swiper-bundle.min.css" />
+
+    <!--==================== CSS ====================-->
+    <link rel="stylesheet" href="./static/css/styles.css" />
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <meta name="keywords" content="申长硕, USTC, 中国科学技术大学, 人工智能与数据科学学院, 人工智能, AI, Artificial Intelligence, Machine Learning, Deep Learning, Computer Vision, Natural Language Processing, Data Science, Computer Science, CS, 计算机科学, 机器学习, 深度学习, 计算机视觉, 自然语言处理, 数据科学" />
+    <meta name="description" content="申长硕的个人主页 | Changshuo Shen's Personal Website" />
+    <meta name="author" content="Changshuo Shen" />
+    <title>Changshuo Shen</title>
+  </head>
+  <body>
+    <!--==================== HEADER ====================-->
+    <header class="header scroll-header" id="header">
+      <nav class="nav container">
+        <a href="https://changshuoshen.github.io/" class="nav__logo">Changshuo Shen</a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list grid">
+            <li class="nav__item">
+              <a href="#" class="nav__link">
+                <i class="uil uil-estate nav__icon"></i>
+                <p i18n="home">Home</p>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="./research.html" class="nav__link">
+                <i class="uil uil-user nav__icon"></i>
+                <p i18n="research">Research</p>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="./publications.html" class="nav__link">
+                <i class="uil uil-file-alt nav__icon"></i>
+                <p i18n="publicatoins">Publications</p>
+              </a>
+            </li>
+            <li class="nav__item nav__dropdown">
+              <a href="./cv.pdf" class="nav__link">
+                <i class="uil uil-file-alt nav__icon"></i>
+                <p i18n="cv">CV</p>
+              </a>
+              <ul class="nav__dropdown-content">
+                <li><a href="./cv.pdf" i18n="cv">CV</a></li>
+                <li><a href="./cv_zh.pdf" i18n="cv_zh">CV (Chinese)</a></li>
+                <li><a href="./cv_1page.pdf" i18n="cv_1page">CV (1 Page)</a></li>
+                <li><a href="./PS.pdf" i18n="personal_statement">Personal Statement</a></li>
+              </ul>
+            </li>
+            <li class="nav__item">
+              <a href="https://changshuoshen.github.io/blog" class="nav__link">
+                <i class="uil uil-notes nav__icon"></i>
+                <p i18n="blog">Blog</p>
+              </a>
+            </li>
+            <!--<li class="nav__item">
+              <div class="nav__link" id="translate" value="en">
+                <svg class="icon nav__icon-svg" aria-hidden="true">
+                  <use xlink:href="#icon-fanyi"></use>
+                </svg>
+                <a class="=nav__link" id="nav__translate">Translate</a>
+              </div>
+            </li>-->
+          </ul>
+          <i class="uil uil-times nav__close" id="nav-close"></i>
+        </div>
+
+        <div class="nav__btns">
+          <i class="uil uil-moon change-theme" id="theme-button"></i>
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="uil uil-apps"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+      <!--==================== HOME ====================-->
+      <section class="home section" id="home">
+        <div class="home__container container grid">
+          <div class="home__content grid">
+            <div class="home__social">
+                <!-- GitHub 链接 -->
+                <a
+                    href="https://github.com/ChangshuoShen"
+                    target="_blank"
+                    class="home__social-icon"
+                    aria-label="GitHub"
+                >
+                    <i class="fab fa-github" style="color: hsl(250deg 69% 61%);"></i>
+                </a>
+            
+                <!-- 邮箱 -->
+                <a
+                    href="mailto:stephenshenc@gmail.com"
+                    target="_blank"
+                    class="home__social-icon"
+                    aria-label="Email"
+                >
+                    <i class="fas fa-envelope" style="color: hsl(250deg 69% 61%);"></i>
+                </a>
+
+                <!-- ORCID -->
+                <a
+                    href="https://orcid.org/0009-0003-2518-554X"
+                    target="_blank"
+                    class="home__social-icon"
+                    aria-label="ORCID"
+                >
+                    <i class="fab fa-orcid" style="color: hsl(250deg 69% 61%);"></i>
+                </a>
+
+                <!-- Google Scholar -->
+                <a
+                    href="https://scholar.google.com/citations?user=nRmy4fgAAAAJ"
+                    target="_blank"
+                    class="home__social-icon"
+                    aria-label="Google Scholar"
+                >
+                    <i class="fa-brands fa-google-scholar" style="color: hsl(250deg 69% 61%);"></i>
+                </a>
+            </div>
+            
+            <div class="home__img">
+              <img src="./static/imgs/icon/square_full_body-removebg.png" alt="">
+            </div>
+
+            <div class="home__data">
+              <h1 class="home__title" i18n="home__title">
+                <img id="name-image" src="./static/imgs/icon/name1.png" alt="Changshuo Shen">
+              </h1>
+              <h3 class="home__subtitle" i18n="home__subtitle">
+                AI and Data Science Enthusiast
+              </h3>
+              <p class="home__description" i18n="home__description">
+                Undergraduate student majoring in AI and Data Science at USTC (University of Science & Technology of China). 
+                <br>
+                My interests include Large Language Models, AI Safety, Explainability, and LLM Agents.
+              </p>
+              <a href="#contact" class="button button-flex">
+                <span i18n="home__contact">Contact Me</span>
+                <i class="uil uil-message button__icon"></i>
+              </a>
+              
+
+            </div>
+          </div>
+          <div class="home__scroll">
+            <a href="#research" class="home__scroll-button button--flex">
+              <i class="uil uil-mouse-alt-2 home__scroll-mouse"></i>
+              <span class="home__scroll-name" i18n="home__scroll-name"
+                >Scroll down</span
+              >
+              <i class="uil uil-arrow-down home__scroll-arrow"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== Research Interest ====================-->
+      <section class="section" id="research">
+        <h2 class="section__title" i18n="research__title">Research Interest</h2>
+        <span class="section__subtitle" i18n="research__subtitle">
+          My research areas
+        </span>
+
+        <div class="content__container container grid">
+          <div>
+            <div class="content__item">
+              <i class="uil uil-brain content__icon"></i>
+              <div>
+                <h3 class="content__title" i18n="research__area1">Large Language Models</h3>
+                <span class="content__description" i18n="research__desc1">
+                  Development, Optimization, Applications
+                </span>
+              </div>
+            </div>
+
+            <div class="content__item">
+              <i class="uil uil-shield-check content__icon"></i>
+              <div>
+                <h3 class="content__title" i18n="research__area2">AI Safety</h3>
+                <span class="content__description" i18n="research__desc2">
+                  Risk Assessment, Mitigation Strategies, Ethical AI
+                </span>
+              </div>
+            </div>
+
+            <div class="content__item">
+              <i class="uil uil-eye content__icon"></i>
+              <div>
+                <h3 class="content__title" i18n="research__area3">Explainability</h3>
+                <span class="content__description" i18n="research__desc3">
+                  Interpretability, Transparency, Model Understanding
+                </span>
+              </div>
+            </div>
+
+            <div class="content__item">
+              <i class="uil uil-robot content__icon"></i>
+              <div>
+                <h3 class="content__title" i18n="research__area4">LLM Agents</h3>
+                <span class="content__description" i18n="research__desc4">
+                  Autonomous Systems, Multi-Agent Systems, Agent-Based Modeling
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== Education ====================-->
+      <section class="education section" id="education">
+        <h2 class="section__title" i18n="education__title">Education</h2>
+        <span class="section__subtitle" i18n="education__subtitle">Academic Experience</span>
+
+        <div class="content__container container grid">
+          <div class="content__item">
+            <i class="uil uil-graduation-cap content__icon"></i>
+            <div>
+              <h3 class="content__title" i18n="education1__title">Bachelor's Degree</h3>
+              <a href="https://saids.ustc.edu.cn/" class="text-decoration-none">
+                <span class="content__subtitle" i18n="education1__department">SAIDS</span>
+                <span class="content__description" i18n="education1__department__description">(School of Artificial Intelligence and Data Science)</span>
+              </a>
+              <br>
+              <a href="https://ustc.edu.cn/" class="text-decoration-none">
+                <span class="content__subtitle" i18n="education1__institution">USTC</span>
+                <span class="content__description" i18n="education1__institution__description">(University of Science & Technology of China)</span>
+              </a>
+              <div class="content__description">
+                <i class="uil uil-calendar-alt"></i> <span i18n="education1__duration">2022 - 2026</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="content__item">
+            <i class="uil uil-graduation-cap content__icon"></i>
+            <div>
+              <h3 class="content__title" i18n="education3__title">Future Studies</h3>
+              <span class="content__description" i18n="education3__institution">To Be Announced</span>
+              <div class="content__description">
+                <i class="uil uil-calendar-alt"></i> <span i18n="education3__duration">TBD</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!--==================== SKILLS ====================-->
+      <section class="skills section" id="skills">
+        <h2 class="section__title" i18n="skills__title">Skills</h2>
+        <span class="section__subtitle" i18n="skills__subtitle">
+          My technical level
+        </span>
+
+        <div class="content__container container grid">
+          <div>
+            <div class="content__item">
+              <i class="uil uil-code-branch content__icon"></i>
+              <div>
+                <h3 class="content__title" i18n="skills__1">Programming Languages</h3>
+                <span class="content__description" i18n="skills__1_desc">
+                  Python, C/C++, JavaScript, Java, R
+                </span>
+              </div>
+            </div>
+
+            <div class="content__item">
+              <i class="uil uil-file-alt content__icon"></i>
+              <div>
+                <h3 class="content__title" i18n="skills__2">Markup & Scriping</h3>
+                <span class="content__description" i18n="skills__2_desc">
+                  LaTeX, HTML, CSS, JavaScript
+                </span>
+              </div>
+            </div>
+            
+            <div class="content__item">
+              <i class="uil uil-wrench content__icon"></i>
+              <div>
+                <h3 class="content__title" i18n="skills__3">Tools & Technologies</h3>
+                <span class="content__description" i18n="skills__3_desc">
+                  Git, Github, MySQL, Linux, Docker
+                </span>
+              </div>
+            </div>
+
+            <div class="content__item">
+              <i class="uil uil-layer-group content__icon"></i>
+              <div>
+                <h3 class="content__title" i18n="skills__4">Framework & Libraries</h3>
+                <span class="content__description" i18n="skills__4_desc">
+                  PyTorch, Django, OpenCV, NumPy, Pandas, Scikit-learn
+                </span>
+              </div>
+            </div>  
+            
+          </div>
+        </div>
+      </section>
+
+
+      <!--==================== Awards ====================-->
+      <section class="section" id="awards&scholarships">
+        <h2 class="section__title" i18n="awards__title">Awards & Scholarships</h2>
+        <span class="section__subtitle" i18n="awards__subtitle">
+          Honors and Achievements
+        </span>
+        
+        <div class="container">
+          <p class="award__item">
+            <span class="award__title" i18n="award4__title">
+              <i class="uil uil-medal"></i> Huawei Scholarship
+            </span>
+            <span class="award__description">
+              <span i18n="award4__institution">USTC</span> | 
+              <i class="uil uil-calendar-alt"></i> <span i18n="award4__date">11/2024</span>
+            </span>
+          </p>
+          <p class="award__item">
+            <span class="award__title" i18n="award5__title">
+              <i class="uil uil-medal"></i> National Encouragement Scholarship
+            </span>
+            <span class="award__description">
+              <span i18n="award5__institution">USTC</span> | 
+              <i class="uil uil-calendar-alt"></i> <span i18n="award5__date">11/2024</span>
+            </span>
+          </p>
+          
+          <p class="award__item">
+            <span class="award__title" i18n="award3__title">
+              <i class="uil uil-medal"></i> Di'ao Scholarship
+            </span>
+            <span class="award__description">
+              <span i18n="award3__institution">USTC</span> | 
+              <i class="uil uil-calendar-alt"></i> <span i18n="award3__date">11/2023</span>
+            </span>
+          </p>
+          <p class="award__item">
+            <span class="award__title" i18n="award1__title">
+              <i class="uil uil-medal"></i> Outstanding Freshman Award
+            </span>
+            <span class="award__description">
+              <span i18n="award1__institution">USTC</span> | 
+              <i class="uil uil-calendar-alt"></i> <span i18n="award1__date">11/2022</span>
+            </span>
+          </p>
+          <p class="award__item">
+            <span class="award__title" i18n="award2__title">
+              <i class="uil uil-medal"></i> Basic Disciplines of The Top Plan Student Funding (Yan Jici Talent Program in Physics)
+            </span>
+            <span class="award__description">
+              <span i18n="award2__institution">USTC</span> | 
+              <i class="uil uil-calendar-alt"></i> <span i18n="award2__date">11/2022</span>
+            </span>
+          </p>
+          <p class="award__item">
+            <span class="award__title" i18n="award6__title">
+              <i class="uil uil-medal"></i> Second Prize in the 15th National College Student Mathematics Competition
+            </span>
+            <span class="award__description">
+              <span i18n="award6__institution">CMS</span> | 
+              <i class="uil uil-calendar-alt"></i> <span i18n="award6__date">1/2024</span>
+            </span>
+          </p>
+        </div>
+      </section>
+
+
+
+      
+      <!--==================== experience ====================-->
+      <section class="experience section" id="experience">
+        <h2 class="section__title" i18n="experience__title">Extracurricular Activities</h2>
+        <span class="section__subtitle" i18n="experience__subtitle"
+          >Some Experiences Selected
+        </span>
+        <div class="experience__container container swiper-container">
+          <div class="swiper-wrapper">
+            <!--==================== experience 1 ====================-->
+
+            <div class="experience__content grid swiper-slide">
+              <img
+                src="./static/imgs/experiences/hkust1.png"
+                alt="HKUST"
+                class="experience__img"
+              />
+
+              <div class="experience_">
+                <h3 class="experience__title" i18n="experience1__title">
+                  HKUST Exchange Program
+                </h3>
+                <p
+                  class="experience__description"
+                  i18n="experience1__description"
+                >
+                Participated in a one-week exchange program at Hong Kong University of Science and Technology (HKUST), 
+                focusing on the intersection of machine learning and physics. Attended the "When Physics Meets Machine Learning" 
+                lecture series and explored cutting-edge research guided by leading experts.
+                </p>
+                <a
+                  href="https://physics.ustc.edu.cn/2023/0810/c3587a610048/page.htm"
+                  target="_blank"
+                  class="button button--flex button--small experience__button"
+                >
+                  Link
+                  <i class="uil uil-arrow-right button__icon"></i>
+                </a>
+              </div>
+            </div>
+
+            <!--==================== experience 2 ====================-->
+
+            <div class="experience__content grid swiper-slide">
+              <img
+                src="./static/imgs/experiences/igem1.png"
+                alt=""
+                class="experience__img"
+              />
+
+              <div class="experience_">
+                <h3 class="experience__title" i18n="experience2__title">
+                  iGEM Jamboree 2024
+                </h3>
+                <p
+                  class="experience__description"
+                  i18n="experience2__description"
+                >
+                Represented the USTC-Software team at the iGEM 2024 Jamboree. 
+                Delivered project presentations on bioinformatics innovations, interacted with global teams, 
+                and contributed to our successful submission in the multi-omics analysis platform category.
+                </p>
+                <a
+                  href="https://2024.igem.wiki/ustc-software/"
+                  target="_blank"
+                  class="button button--flex button--small experience__button"
+                >
+                  Wiki
+                  <i class="uil uil-arrow-right button__icon"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- add arrows-->
+          <div class="swiper-button-next">
+            <i class="uil uil-angle-right-b swiper-experience-icon"></i>
+          </div>
+
+          <div class="swiper-button-prev">
+            <i class="uil uil-angle-left-b swiper-experience-icon"></i>
+          </div>
+
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <!--==================== CONTACT ME ====================-->
+      <section class="section" id="contact">
+        <h2 class="section__title" i18n="contact__title">Contact me</h2>
+        <span class="section__subtitle" i18n="contact__subtitle">
+          Get in touch
+        </span>
+
+        <div class="content__container container grid">
+          <div>
+            <div class="content__item">
+              <i class="uil uil-phone-alt content__icon"></i>
+              <div>
+                <h3 class="content__title" i18n="tel">Call me</h3>
+                <span class="content__description" i18n="tel__number">
+                  18790691295
+                </span>
+              </div>
+            </div>
+
+            <div class="content__item">
+              <i class="uil uil-envelope content__icon"></i>
+              <div>
+                <h3 class="content__title" i18n="email">E-mail</h3>
+                <span class="content__description" i18n="email__address">
+                  stephenshenc@gmail.com
+                </span>
+              </div>
+            </div>
+
+            <div class="content__item">
+              <i class="uil uil-map-marker content__icon"></i>
+              <div>
+                <h3 class="content__title" i18n="location">Location</h3>
+                <span class="content__description" i18n="location__detail">
+                  HeFei , CHN
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--==================== SCROLL TOP ====================-->
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
+    <!--==================== SWIPER JS ====================-->
+    <script src="./static/js/swiper-bundle.min.js"></script>
+
+    <!-- iconfont JS -->
+    <script src="./static/js/iconfont.js"></script>
+    <!-- jquery -->
+    <script src="./static/js/jquery2.1.4.min.js"></script>
+    <script src="./static/js/jquery.i18n.min.js"></script>
+    <!--==================== MAIN JS ====================-->
+    <script src="./static/js/main-home.js"></script>
+
+    <!-- translate JS -->
+    <!-- <script src="./static/js/cn-en-translate.js"></script> -->
+  </body>
+</html>
