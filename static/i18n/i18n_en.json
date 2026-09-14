@@ -8,14 +8,14 @@
     "publications":"publications",
     
     "home__title":"Hi, I'm ShenChangshuo",
-    "home__subtitle":"AI and Data Science Student",
-    "home__description":"Passionate about learning, research, and contributing to advancements in AI, data science, and bioinformatics.",
+    "home__subtitle":"Graduate Student at USTC SAIDS",
+    "home__description":"I am a graduate student at the School of Artificial Intelligence and Data Science (SAIDS), University of Science and Technology of China (USTC).<br/>My research interests include large language models, reasoning, and AI safety.",
     "home__contact":"Contact Me",
     "home__scroll-name":"Scroll down",
 
     "about__title":"About Me",
     "about__subtitle":"Brief introduction",
-    "about__description":"Undergraduate student majoring in AI and Data Science at USTC(University of Science & Technology of China). <br/>My interests include:",
+    "about__description":"Graduate student at the School of Artificial Intelligence and Data Science (SAIDS), University of Science and Technology of China (USTC). <br/>My research interests include:",
    
     "about__info-name1":"Large Language Models",
     "about__info-name2":"Natural Language Processing",
@@ -66,8 +66,6 @@
     
     "contact__title":"Contact me",
     "contact__subtitle":"Get in touch",
-    "tel":"Call me",
-    "tel__number":"18790691295",
     "email":"E-mail",
     "email__address":"stephenshenc@gmail.com",
     "location":"Location",
